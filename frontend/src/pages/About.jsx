@@ -16,17 +16,17 @@ function About() {
         />
         <div className="flex flex-col justify-center gap-6 md:w-2/4 tex-sm text-gray-600">
           <p>
-            Welcome to Prescripto, your trusted partner in managing your
+            Welcome to Telecare, your trusted partner in managing your
             healthcare needs
           </p>
           <p>
-            Prescripto is committed to excellence in healthcare technology. We
+            Telecare is committed to excellence in healthcare technology. We
             continuosly strive
           </p>
           <b className="text-gray-800">Our Vision</b>
           <p>
-            Our vision at Prescripto is to create a seamless healthcare
-            experience for every individual. We aim to bridge the
+            Our vision at Telecare is to create a seamless healthcare experience
+            for every individual. We aim to bridge the
           </p>
         </div>
       </div>
