@@ -50,7 +50,3 @@ app.listen(port, console.log("Server started successfully on ", port));
 //     .then((user) => res.json(user))
 //     .catch((err) => res.status(400).json({ error: "Registration failed" }));
 // });
-
-// app.listen(port, () => {
-//   console.log(`Server started on port ${port}`);
-// });

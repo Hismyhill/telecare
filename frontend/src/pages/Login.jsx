@@ -4,19 +4,9 @@ import { useState } from "react";
 function Login() {
   // const navigate = useNavigate();
   const [state, setState] = useState("Sign Up");
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    password: "",
-  });
-
-  function handleChange(e) {
-    const { name, value } = e.target;
-    setFormData({
-      ...formData,
-      [name]: value,
-    });
-  }
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
 
   async function handleSubmit(e) {
     e.preventDefault();
@@ -38,10 +28,10 @@ function Login() {
             <label htmlFor="name">Full name</label>
             <input
               className="border border-zinc-300 rounded w-full p-2 mt-1"
-              onChange={handleChange}
+              onChange={(e) => setName(e.target.value)}
               type="text"
               id="name"
-              value={formData.name}
+              value={name}
               required
             />
           </div>
@@ -53,8 +43,8 @@ function Login() {
             className="border border-zinc-300 rounded w-full p-2 mt-1"
             type="email"
             id="email"
-            onChange={handleChange}
-            value={formData.email}
+            onChange={(e) => setEmail(e.target.value)}
+            value={email}
             required
           />
         </div>
@@ -64,8 +54,8 @@ function Login() {
             className="border border-zinc-300 rounded w-full p-2 mt-1"
             type="password"
             id="password"
-            onChange={handleChange}
-            value={formData.password}
+            onChange={(e) => setPassword(e.target.value)}
+            value={password}
             required
           />
         </div>
