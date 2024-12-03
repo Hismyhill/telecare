@@ -1,7 +1,7 @@
 import validator from "validator";
 import bcrypt from "bcryptjs";
 import { v2 as cloudinary } from "cloudinary";
-import doctorModel from "../models/doctorModel";
+import doctorModel from "../models/doctorModel.js";
 import jwt from "jsonwebtoken";
 
 //API for adding Doctor
@@ -94,7 +94,7 @@ async function addDoctor() {
 }
 
 //  API for Admin login
-const loginAdmin = async (req, res) => {
+async function loginAdmin(req, res) {
   try {
     const { email, password } = req.body;
 
@@ -111,6 +111,6 @@ const loginAdmin = async (req, res) => {
     console.log(error);
     res.json({ success: false, message: error.message });
   }
-};
+}
 
 export { addDoctor, loginAdmin };

@@ -13,8 +13,11 @@ async function authAdmin(req, res, next) {
     if (token_decode !== process.env.ADMIN_EMAIL + process.env.JWT_SECRET) {
       res.json({ success: false, message: "Not authorized to login again" });
     }
+    next();
   } catch (error) {
     console.log(error);
     res.json({ success: false, message: error.message });
   }
 }
+
+export default authAdmin;

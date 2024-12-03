@@ -22,7 +22,7 @@ function RelatedDoctors({ speciality, docId }) {
 
   return (
     <div className="flex flex-col items-center gap-4 my-16 text-gray-900 md:mx-10">
-      <h2 className="text-3xl font-medium">Top Doctors</h2>
+      <h2 className="text-3xl font-medium">Related Doctors</h2>
       <p className="sm:w-1/3 text-center text-">
         Simply browse through our extensive list of trusted doctors
       </p>
